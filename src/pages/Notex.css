@@ -1,0 +1,168 @@
+/* Page */
+.notex-page {
+  padding: 40px 60px;
+  background: #f5f7fb;
+}
+
+/* Center heading */
+.notex-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.notex-header h1 {
+  font-size: 36px;
+  color: #1e3a8a;
+}
+
+.notex-header p {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* Grid: EXACTLY 3 per row */
+.notex-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Card */
+.notex-card {
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.notex-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Tag */
+.notex-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #1e3a8a;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+
+/* Text */
+.notex-card h3 {
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+.desc {
+  color: #4b5563;
+  margin: 10px 0;
+}
+
+/* Preview box */
+.preview-box {
+  height: 140px;
+  background: #e5e7eb;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.preview-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pdf-box {
+  font-weight: 500;
+}
+
+.text-box {
+  font-style: italic;
+}
+
+/* Date */
+.date {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Modal */
+.notex-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  width: 70%;
+  max-width: 800px;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-media {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  border: none;
+}
+
+.modal-text {
+  font-size: 16px;
+  color: #374151;
+  margin-top: 20px;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #1e3a8a;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .notex-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .notex-grid {
+    grid-template-columns: 1fr;
+  }
+}
