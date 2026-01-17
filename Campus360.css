@@ -2,43 +2,65 @@
 .campus-hero-section {
   position: relative;
   width: 100%;
-  height: 80vh; /* Takes up 80% of the screen height */
+  height: 85vh; /* Increased height for better immersion */
   overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: black; /* Fallback color */
+  flex-direction: column;
+  background: black;
 }
 
-/* The Video acts as a background image */
-.background-video {
+/* Wrapper for the library component */
+.pannellum-wrapper {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* This makes it fill the screen perfectly (cuts edges if needed) */
   z-index: 1;
-  opacity: 0.6; /* Slightly darkens video so text is readable */
 }
 
-/* Text floating on top */
+/* UI Overlay */
 .hero-overlay {
-  position: relative;
-  z-index: 2; /* Puts text above video */
+  position: absolute;
+  bottom: 40px; /* Moved to bottom for a cleaner view */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; /* Ensures buttons are clickable above the viewer */
   text-align: center;
   color: white;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
   padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px); /* Nice blurry glass effect */
 }
 
 .hero-overlay h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  font-size: 2rem;
+  margin: 0 0 10px 0;
   font-weight: bold;
 }
 
-.hero-overlay p {
-  font-size: 1.2rem;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+/* Buttons to switch images */
+.location-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.location-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.location-buttons button:hover {
+  background-color: #ff6b6b; /* Accent color */
+  color: white;
+  transform: scale(1.05);
 }
